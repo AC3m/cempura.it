@@ -1,9 +1,7 @@
 name: Deploy to S3
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -36,3 +34,10 @@ jobs:
       - name: Upload to S3
         run: |
           aws s3 sync dist/ s3://${{ secrets.S3_BUCKET }}/ --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID}} \
+          --paths "/*"
+        
