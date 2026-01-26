@@ -20,24 +20,61 @@ npm run preview
 
 ## Deploy
 
-### Netlify (recommended)
+### AWS S3 + CloudFront (GitHub Actions)
 
-\`\`\`bash
+This project uses automated deployment to AWS S3 with CloudFront CDN via GitHub Actions.
+
+#### Required GitHub Secrets
+
+Add these secrets to your repository (Settings → Secrets and variables → Actions → Environments → PROD):
+
+| Secret Name | Description | How to get it |
+|-------------|-------------|---------------|
+| `AWS_ACCESS_KEY_ID` | IAM user access key | AWS Console → IAM → Users → Security credentials |
+| `AWS_SECRET_ACCESS_KEY` | IAM secret key | Created with access key (save immediately!) |
+| `AWS_REGION` | S3 bucket region | e.g., `us-east-1`, `eu-west-1` |
+| `S3_BUCKET` | S3 bucket name | AWS Console → S3 → Your bucket name |
+| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID | AWS Console → CloudFront → Distribution ID |
+
+#### IAM Permissions Required
+
+Your IAM user needs these policies:
+- **S3**: `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject`, `s3:ListBucket`
+- **CloudFront**: `cloudfront:CreateInvalidation`, `cloudfront:GetInvalidation`
+
+Or use AWS managed policies: `AmazonS3FullAccess` + `CloudFrontFullAccess` (less secure but simpler).
+
+#### Deploy
+
+Deployment is **manual** (on-demand):
+1. Go to GitHub → Actions → "Deploy to S3"
+2. Click "Run workflow"
+3. Select branch (usually `main`)
+4. Click "Run workflow"
+
+The workflow will:
+1. Build the project (`npm run build`)
+2. Upload `dist/` to S3
+3. Invalidate CloudFront cache
+
+### Netlify (alternative)
+
+```bash
 npm run build
-# Drag & drop the \`dist\` folder to netlify.com
+# Drag & drop the `dist` folder to netlify.com
 # Or use Netlify CLI: netlify deploy --prod
-\`\`\`
+```
 
 ### GitHub Pages
 
-1. Add to \`vite.config.ts\`:
-   \`\`\`ts
+1. Add to `vite.config.ts`:
+   ```ts
    export default defineConfig({
      base: '/repo-name/', // if not using custom domain
      // ...
    })
-   \`\`\`
-2. Build and push the \`dist\` folder to \`gh-pages\` branch
+   ```
+2. Build and push the `dist` folder to `gh-pages` branch
 
 ### Vercel
 
