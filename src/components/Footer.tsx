@@ -25,18 +25,6 @@ export function Footer() {
           <MapPin className="h-4 w-4" />
           <span>Kraków, PL · Open to remote</span>
         </div>
-
-        <motion.a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-text-secondary transition-colors hover:text-accent"
-          whileHover={prefersReducedMotion ? undefined : { scale: 1.02 }}
-          whileTap={prefersReducedMotion ? undefined : { scale: 0.98 }}
-        >
-          <FileText className="h-4 w-4" />
-          <span>Download CV</span>
-        </motion.a>
       </div>
     </motion.footer>
   )

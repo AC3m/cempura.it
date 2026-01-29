@@ -1,8 +1,3 @@
-/**
- * Motion configuration - centralized animation variants
- * Respects prefers-reduced-motion via useReducedMotion hook
- */
-
 export const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
   visible: {
@@ -40,7 +35,6 @@ export const staggerItem = {
   },
 }
 
-// For reduced motion - instant transitions
 export const reducedMotion = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0 } },
