@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { MapPin, FileText } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 export function Footer() {
   const prefersReducedMotion = useReducedMotion()
