@@ -74,7 +74,7 @@ npm run lint     # ESLint with React + TypeScript rules
 **Key sections to customize:**
 - Hero: [src/components/Hero.tsx](../src/components/Hero.tsx) (name, title, LinkedIn URL)
 - Tech stack: [src/components/Tech.tsx](../src/components/Tech.tsx) (`techGroups` array)
-- Footer: [src/components/Footer.tsx](../src/components/Footer.tsx) (CV link, social links)
+- Footer: [src/components/Footer.tsx](../src/components/Footer.tsx) (social links)
 
 ## Conventions
 

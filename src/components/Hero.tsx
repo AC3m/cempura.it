@@ -52,7 +52,7 @@ export function Hero() {
           variants={itemVariants}
           className="mb-6 text-xl font-medium text-accent sm:text-2xl"
         >
-          Product-focused engineering leader
+          Engineering Manager / Software Engineering Team Lead
         </motion.p>
 
         {/* Statement */}
@@ -61,7 +61,7 @@ export function Hero() {
           className="mb-10 max-w-lg text-lg leading-relaxed text-text-secondary sm:text-xl"
         >
           I lead teams building reliable, high-performance systems.
-          Focused on delivery, people, and sustainable outcomes.
+          Led product teams of up to 9 engineers delivering high-traffic, customer-facing systems.
         </motion.p>
 
         {/* CTAs */}

@@ -1,11 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 const strengths = [
-  'Clarity from chaos',
-  'Delivery predictability',
-  'Autonomy-first leadership',
-  'Strategic execution',
-  'Team empowerment',
+  'Turning ambiguity into execution',
+  'Predictable roadmap delivery',
+  'Autonomy with accountability',
+  'Business-aligned execution',
+  'Growing senior engineers',
 ]
 
 export function Strengths() {
