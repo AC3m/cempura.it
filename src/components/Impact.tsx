@@ -4,12 +4,12 @@ import { Users, TrendingUp, GitMerge } from 'lucide-react'
 const impacts = [
   {
     icon: Users,
-    title: 'Team scaling & development',
+    title: 'Team scaling',
     description: 'Built and grown high-performing engineering teams',
   },
   {
     icon: TrendingUp,
-    title: 'Product delivery & reliability',
+    title: 'Product impact',
     description: 'Shipped changes with measurable business outcomes',
   },
   {
