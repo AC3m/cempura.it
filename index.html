@@ -23,7 +23,12 @@
       }
       gtag('js', new Date());
 
-      gtag('config', 'G-Q71NMZ6152');
+      // Cookie-less configuration
+      gtag('config', 'G-Q71NMZ6152', {
+        anonymize_ip: true,
+        client_storage: 'none',
+        cookie_flags: 'SameSite=None;Secure'
+      });
     </script>
   </head>
   <body>

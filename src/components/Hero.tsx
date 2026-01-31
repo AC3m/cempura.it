@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Logo } from './Logo';
+import { trackClick } from '../lib/analytics';
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion();
@@ -72,6 +73,7 @@ export function Hero() {
         >
           <motion.a
             href="mailto:cempura.artur@gmail.com"
+            onClick={() => trackClick('email')}
             className="group flex min-h-[48px] items-center justify-center gap-3 rounded-xl bg-accent px-6 py-3 font-medium text-background transition-all hover:bg-accent-hover hover:shadow-md"
             whileTap={prefersReducedMotion ? undefined : { scale: 0.97 }}
             aria-label="Send email"
@@ -83,6 +85,7 @@ export function Hero() {
 
           <motion.a
             href="https://www.linkedin.com/in/arturcempura/"
+            onClick={() => trackClick('linkedin')}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex min-h-[48px] items-center justify-center gap-3 rounded-xl border border-border bg-surface-1 px-6 py-3 font-medium text-text-primary transition-all hover:bg-surface-2 hover:border-text-muted"
