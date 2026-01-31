@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import logoSrc from '../assets/logo.png';
+import logoSrc from '../assets/logo3.png';
 
 interface LogoProps {
   size?: number;

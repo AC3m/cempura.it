@@ -1,10 +1,32 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Logo } from './Logo';
 import { trackClick } from '../lib/analytics';
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion();
+  const { scrollY } = useScroll();
+
+  // Transform scroll position into padding values with px units
+  const paddingY = useTransform(
+    scrollY,
+    [0, 200],
+    prefersReducedMotion ? ['64px', '64px'] : ['64px', '16px']
+  );
+
+  // Scale down the content
+  const scale = useTransform(
+    scrollY,
+    [0, 200],
+    prefersReducedMotion ? [1, 1] : [1, 0.85]
+  );
+
+  // Reduce the min-height dynamically
+  const minHeight = useTransform(
+    scrollY,
+    [0, 200],
+    prefersReducedMotion ? ['100vh', '100vh'] : ['100vh', 'auto']
+  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,12 +52,22 @@ export function Hero() {
   };
 
   return (
-    <section className="flex min-h-[100vh] flex-col items-center justify-center px-6 py-16 sm:min-h-[80vh] sm:py-24">
+    <motion.section
+      className="flex flex-col items-center justify-center bg-background px-6"
+      style={{
+        paddingTop: paddingY,
+        paddingBottom: paddingY,
+        minHeight: minHeight,
+      }}
+    >
       <motion.div
         className="flex max-w-2xl flex-col items-center text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        style={{
+          scale,
+        }}
       >
         <motion.div variants={itemVariants} className="text-accent">
           <Logo size={258} className="sm:h-72 sm:w-72" />
@@ -98,6 +130,6 @@ export function Hero() {
           </motion.a>
         </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
