@@ -7,17 +7,20 @@ Single-page personal portfolio website (digital business card) built with React 
 ## Architecture
 
 **Single-page app structure:**
+
 - [src/App.tsx](../src/App.tsx): Root component that imports and renders all sections vertically (Hero → Impact → Strengths → Tech → Footer)
 - [src/components/](../src/components/): Self-contained section components with embedded motion variants
 - No routing, no state management - pure presentational components
 
 **Key files:**
+
 - [src/lib/motion.ts](../src/lib/motion.ts): Reusable Framer Motion animation presets
 - [src/index.css](../src/index.css): Tailwind 4 CSS with custom `@theme` token definitions
 
 ## Design System
 
 **Color tokens** (defined in [index.css](../src/index.css#L24-L36)):
+
 ```css
 background, surface-1, surface-2, surface-3, border
 text-primary, text-secondary, text-muted
@@ -33,16 +36,22 @@ Always use semantic tokens (e.g., `bg-surface-1`, `text-text-secondary`) - never
 ## Animation Patterns
 
 **Every component follows this pattern:**
+
 ```tsx
-const prefersReducedMotion = useReducedMotion()
+const prefersReducedMotion = useReducedMotion();
 
 const variants = {
   hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: prefersReducedMotion ? 0 : 0.5 } }
-}
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: prefersReducedMotion ? 0 : 0.5 },
+  },
+};
 ```
 
 **Scroll-triggered sections use:**
+
 ```tsx
 initial="hidden"
 whileInView="visible"
@@ -63,6 +72,7 @@ npm run lint     # ESLint with React + TypeScript rules
 ## Deployment
 
 **Primary:** Manual GitHub Actions workflow [.github/workflows/deploy.yml](../.github/workflows/deploy.yml)
+
 - Trigger: GitHub Actions → "Deploy to S3" → Run workflow
 - Requires AWS secrets configured in PROD environment (see [README.md](../README.md#L29-L36))
 - Workflow: builds → syncs to S3 → invalidates CloudFront → tags release
@@ -72,6 +82,7 @@ npm run lint     # ESLint with React + TypeScript rules
 ## Content Updates
 
 **Key sections to customize:**
+
 - Hero: [src/components/Hero.tsx](../src/components/Hero.tsx) (name, title, LinkedIn URL)
 - Tech stack: [src/components/Tech.tsx](../src/components/Tech.tsx) (`techGroups` array)
 - Footer: [src/components/Footer.tsx](../src/components/Footer.tsx) (social links)

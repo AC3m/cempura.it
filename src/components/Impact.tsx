@@ -1,5 +1,5 @@
-import { motion, useReducedMotion } from 'framer-motion'
-import { Users, TrendingUp, GitMerge } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion';
+import { Users, TrendingUp, GitMerge } from 'lucide-react';
 
 const impacts = [
   {
@@ -17,10 +17,10 @@ const impacts = [
     title: 'Cross-functional',
     description: 'Bridge engineering, product, and operations',
   },
-]
+];
 
 export function Impact() {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,7 +30,7 @@ export function Impact() {
         staggerChildren: prefersReducedMotion ? 0 : 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 16 },
@@ -39,7 +39,7 @@ export function Impact() {
       y: 0,
       transition: { duration: prefersReducedMotion ? 0 : 0.4 },
     },
-  }
+  };
 
   return (
     <section className="px-6 py-12 sm:py-16">
@@ -59,7 +59,7 @@ export function Impact() {
 
         <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
           {impacts.map((item) => {
-            const Icon = item.icon
+            const Icon = item.icon;
             return (
               <motion.div
                 key={item.title}
@@ -81,10 +81,10 @@ export function Impact() {
                   {item.description}
                 </p>
               </motion.div>
-            )
+            );
           })}
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

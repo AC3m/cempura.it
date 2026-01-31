@@ -1,8 +1,8 @@
-import { motion, useReducedMotion } from 'framer-motion'
-import { MapPin } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion';
+import { MapPin } from 'lucide-react';
 
 export function Footer() {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
 
   const variants = {
     hidden: { opacity: 0 },
@@ -10,7 +10,7 @@ export function Footer() {
       opacity: 1,
       transition: { duration: prefersReducedMotion ? 0 : 0.4 },
     },
-  }
+  };
 
   return (
     <motion.footer
@@ -27,5 +27,5 @@ export function Footer() {
         </div>
       </div>
     </motion.footer>
-  )
+  );
 }

@@ -5,16 +5,21 @@ A premium, modern, mobile-first personal website — a **digital business card**
 ## Quick Start
 
 \`\`\`bash
+
 # Install dependencies
+
 npm install
 
 # Start development server
+
 npm run dev
 
 # Build for production
+
 npm run build
 
 # Preview production build
+
 npm run preview
 \`\`\`
 
@@ -28,17 +33,18 @@ This project uses automated deployment to AWS S3 with CloudFront CDN via GitHub 
 
 Add these secrets to your repository (Settings → Secrets and variables → Actions → Environments → PROD):
 
-| Secret Name | Description | How to get it |
-|-------------|-------------|---------------|
-| `AWS_ACCESS_KEY_ID` | IAM user access key | AWS Console → IAM → Users → Security credentials |
-| `AWS_SECRET_ACCESS_KEY` | IAM secret key | Created with access key (save immediately!) |
-| `AWS_REGION` | S3 bucket region | e.g., `us-east-1`, `eu-west-1` |
-| `S3_BUCKET` | S3 bucket name | AWS Console → S3 → Your bucket name |
-| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID | AWS Console → CloudFront → Distribution ID |
+| Secret Name                  | Description                | How to get it                                    |
+| ---------------------------- | -------------------------- | ------------------------------------------------ |
+| `AWS_ACCESS_KEY_ID`          | IAM user access key        | AWS Console → IAM → Users → Security credentials |
+| `AWS_SECRET_ACCESS_KEY`      | IAM secret key             | Created with access key (save immediately!)      |
+| `AWS_REGION`                 | S3 bucket region           | e.g., `us-east-1`, `eu-west-1`                   |
+| `S3_BUCKET`                  | S3 bucket name             | AWS Console → S3 → Your bucket name              |
+| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID | AWS Console → CloudFront → Distribution ID       |
 
 #### IAM Permissions Required
 
 Your IAM user needs these policies:
+
 - **S3**: `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject`, `s3:ListBucket`
 - **CloudFront**: `cloudfront:CreateInvalidation`, `cloudfront:GetInvalidation`
 
@@ -47,12 +53,14 @@ Or use AWS managed policies: `AmazonS3FullAccess` + `CloudFrontFullAccess` (less
 #### Deploy
 
 Deployment is **manual** (on-demand):
+
 1. Go to GitHub → Actions → "Deploy to S3"
 2. Click "Run workflow"
 3. Select branch (usually `main`)
 4. Click "Run workflow"
 
 The workflow will:
+
 1. Build the project (`npm run build`)
 2. Upload `dist/` to S3
 3. Invalidate CloudFront cache
@@ -72,7 +80,7 @@ npm run build
    export default defineConfig({
      base: '/repo-name/', // if not using custom domain
      // ...
-   })
+   });
    ```
 2. Build and push the `dist` folder to `gh-pages` branch
 
@@ -95,32 +103,32 @@ vercel --prod
 
 ### Colors
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| \`background\` | \`#0a0a0b\` | Page background |
-| \`surface\` | \`#141416\` | Card backgrounds |
+| Token                | Value       | Usage                         |
+| -------------------- | ----------- | ----------------------------- |
+| \`background\`       | \`#0a0a0b\` | Page background               |
+| \`surface\`          | \`#141416\` | Card backgrounds              |
 | \`surface-elevated\` | \`#1c1c1f\` | Hover states, nested surfaces |
-| \`border\` | \`#27272a\` | Dividers, subtle borders |
-| \`text-primary\` | \`#fafafa\` | Headings, important text |
-| \`text-secondary\` | \`#a1a1aa\` | Body text |
-| \`text-muted\` | \`#71717a\` | Captions, labels |
-| \`accent\` | \`#3b82f6\` | Primary accent (blue-500) |
-| \`accent-hover\` | \`#60a5fa\` | Accent hover state (blue-400) |
+| \`border\`           | \`#27272a\` | Dividers, subtle borders      |
+| \`text-primary\`     | \`#fafafa\` | Headings, important text      |
+| \`text-secondary\`   | \`#a1a1aa\` | Body text                     |
+| \`text-muted\`       | \`#71717a\` | Captions, labels              |
+| \`accent\`           | \`#3b82f6\` | Primary accent (blue-500)     |
+| \`accent-hover\`     | \`#60a5fa\` | Accent hover state (blue-400) |
 
 ### Typography Scale
 
 Based on 16px root, using system font stack for optimal performance.
 
-| Class | Size | Line Height | Usage |
-|-------|------|-------------|-------|
-| \`text-xs\` | 12px | 16px | Tags, labels |
-| \`text-sm\` | 14px | 20px | Secondary text |
-| \`text-base\` | 16px | 24px | Body text |
-| \`text-lg\` | 18px | 28px | Large body |
-| \`text-xl\` | 20px | 28px | Section titles |
-| \`text-2xl\` | 24px | 32px | Card titles |
-| \`text-3xl\` | 30px | 36px | Name (mobile) |
-| \`text-4xl\` | 36px | 40px | Name (desktop) |
+| Class         | Size | Line Height | Usage          |
+| ------------- | ---- | ----------- | -------------- |
+| \`text-xs\`   | 12px | 16px        | Tags, labels   |
+| \`text-sm\`   | 14px | 20px        | Secondary text |
+| \`text-base\` | 16px | 24px        | Body text      |
+| \`text-lg\`   | 18px | 28px        | Large body     |
+| \`text-xl\`   | 20px | 28px        | Section titles |
+| \`text-2xl\`  | 24px | 32px        | Card titles    |
+| \`text-3xl\`  | 30px | 36px        | Name (mobile)  |
+| \`text-4xl\`  | 36px | 40px        | Name (desktop) |
 
 **Heading style:** Tight leading (\`leading-tight\`), \`font-bold\`, \`tracking-tight\`  
 **Body style:** Relaxed leading (\`leading-relaxed\`), normal weight
@@ -129,23 +137,23 @@ Based on 16px root, using system font stack for optimal performance.
 
 8px grid system. Key values:
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| \`gap-2\` | 8px | Tag gaps, tight spacing |
-| \`gap-3\` | 12px | List items, button content |
-| \`gap-4\` | 16px | Card gaps (mobile) |
-| \`gap-5\` | 20px | Card gaps (desktop) |
-| \`p-6\` | 24px | Card padding (mobile) |
-| \`p-8\` | 32px | Card padding (desktop) |
+| Token     | Value | Usage                      |
+| --------- | ----- | -------------------------- |
+| \`gap-2\` | 8px   | Tag gaps, tight spacing    |
+| \`gap-3\` | 12px  | List items, button content |
+| \`gap-4\` | 16px  | Card gaps (mobile)         |
+| \`gap-5\` | 20px  | Card gaps (desktop)        |
+| \`p-6\`   | 24px  | Card padding (mobile)      |
+| \`p-8\`   | 32px  | Card padding (desktop)     |
 
 ### Border Radii
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| \`rounded-lg\` | 8px | Tags, small buttons |
-| \`rounded-xl\` | 12px | Buttons, nested cards |
-| \`rounded-2xl\` | 16px | Avatar |
-| \`rounded-[20px]\` | 20px | Main cards |
+| Token              | Value | Usage                 |
+| ------------------ | ----- | --------------------- |
+| \`rounded-lg\`     | 8px   | Tags, small buttons   |
+| \`rounded-xl\`     | 12px  | Buttons, nested cards |
+| \`rounded-2xl\`    | 16px  | Avatar                |
+| \`rounded-[20px]\` | 20px  | Main cards            |
 
 ### Shadows
 
@@ -172,17 +180,17 @@ Cards have a subtle inner border (1px white at 5% opacity) + soft drop shadow.
 \`\`\`
 src/
 ├── components/
-│   ├── Card.tsx          # Base card with shadow, radius, hover
-│   ├── Header.tsx        # Sticky header with logo
-│   ├── HeroCard.tsx      # Name, title, positioning
-│   ├── ImpactCard.tsx    # Value bullets
-│   ├── StrengthsCard.tsx # 2x2 strengths grid
-│   ├── TechCard.tsx      # Tech tags
-│   ├── ContactCard.tsx   # Email + LinkedIn CTAs
-│   └── Footer.tsx        # Location + CV link
-├── App.tsx               # Layout + animation orchestration
-├── main.tsx              # Entry point
-└── index.css             # Tailwind + design tokens
+│ ├── Card.tsx # Base card with shadow, radius, hover
+│ ├── Header.tsx # Sticky header with logo
+│ ├── HeroCard.tsx # Name, title, positioning
+│ ├── ImpactCard.tsx # Value bullets
+│ ├── StrengthsCard.tsx # 2x2 strengths grid
+│ ├── TechCard.tsx # Tech tags
+│ ├── ContactCard.tsx # Email + LinkedIn CTAs
+│ └── Footer.tsx # Location + CV link
+├── App.tsx # Layout + animation orchestration
+├── main.tsx # Entry point
+└── index.css # Tailwind + design tokens
 \`\`\`
 
 ## Tech Stack

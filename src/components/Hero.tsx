@@ -1,9 +1,9 @@
-import { motion, useReducedMotion } from 'framer-motion'
-import { Mail, Linkedin, ArrowUpRight } from 'lucide-react'
-import { Logo } from './Logo'
+import { motion, useReducedMotion } from 'framer-motion';
+import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Hero() {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -14,19 +14,19 @@ export function Hero() {
         delayChildren: prefersReducedMotion ? 0 : 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: prefersReducedMotion ? 0 : 0.5, 
-        ease: [0.25, 0.46, 0.45, 0.94] as const 
+      transition: {
+        duration: prefersReducedMotion ? 0 : 0.5,
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
       },
     },
-  }
+  };
 
   return (
     <section className="flex min-h-[100vh] flex-col items-center justify-center px-6 py-16 sm:min-h-[80vh] sm:py-24">
@@ -60,8 +60,9 @@ export function Hero() {
           variants={itemVariants}
           className="mb-10 max-w-lg text-lg leading-relaxed text-text-secondary sm:text-xl"
         >
-          I lead teams building reliable, high-performance systems.
-          Led product teams of up to 9 engineers delivering high-traffic, customer-facing systems.
+          I lead teams building reliable, high-performance systems. Led product
+          teams of up to 9 engineers delivering high-traffic, customer-facing
+          systems.
         </motion.p>
 
         {/* CTAs */}
@@ -95,5 +96,5 @@ export function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

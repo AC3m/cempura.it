@@ -1,36 +1,22 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion';
 
 const techGroups = [
   {
     label: 'Systems',
-    items: [
-      'Distributed Systems',
-      'REST APIs',
-      'DynamoDB',
-      'Kafka / MSK',
-    ],
+    items: ['Distributed Systems', 'REST APIs', 'DynamoDB', 'Kafka / MSK'],
   },
   {
     label: 'Frontend',
-    items: [
-      'TypeScript',
-      'React',
-    ],
+    items: ['TypeScript', 'React'],
   },
   {
     label: 'Platform & Operations',
-    items: [
-      'AWS',
-      'Kubernetes',
-      'CI/CD',
-      'Observability & Reliability',
-    ],
+    items: ['AWS', 'Kubernetes', 'CI/CD', 'Observability & Reliability'],
   },
 ];
 
-
 export function Tech() {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +26,7 @@ export function Tech() {
         staggerChildren: prefersReducedMotion ? 0 : 0.1,
       },
     },
-  }
+  };
 
   const groupVariants = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 12 },
@@ -49,7 +35,7 @@ export function Tech() {
       y: 0,
       transition: { duration: prefersReducedMotion ? 0 : 0.4 },
     },
-  }
+  };
 
   return (
     <section className="px-6 py-12 sm:py-16">
@@ -92,5 +78,5 @@ export function Tech() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

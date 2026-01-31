@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion';
 
 const strengths = [
   'Turning ambiguity into execution',
@@ -6,10 +6,10 @@ const strengths = [
   'Autonomy with accountability',
   'Business-aligned execution',
   'Growing senior engineers',
-]
+];
 
 export function Strengths() {
-  const prefersReducedMotion = useReducedMotion()
+  const prefersReducedMotion = useReducedMotion();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -20,7 +20,7 @@ export function Strengths() {
         delayChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.9 },
@@ -29,7 +29,7 @@ export function Strengths() {
       scale: 1,
       transition: { duration: prefersReducedMotion ? 0 : 0.3 },
     },
-  }
+  };
 
   return (
     <section className="px-6 py-12 sm:py-16">
@@ -65,5 +65,5 @@ export function Strengths() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
