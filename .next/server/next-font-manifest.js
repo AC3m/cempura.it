@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/acempura/Code/Side/cempura.it/app/layout":["static/media/6e8c7cb283336a9d-s.p.woff2","static/media/e4af272ccee01ff0-s.p.woff2","static/media/558ca1a6aa3cb55e-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

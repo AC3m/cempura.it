@@ -3,7 +3,7 @@ import Link from 'next/link'
 export function LogoMark({ className = '' }: { className?: string }) {
   return (
     <Link href="/" className={`flex items-center gap-2 group ${className}`} style={{ color: 'var(--ink)' }}>
-      <svg viewBox="0 0 28 28" className="w-7 h-7" aria-hidden="true">
+      <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true" style={{ flexShrink: 0 }}>
         <path
           d="M5 6 L2 14 L5 22"
           fill="none"

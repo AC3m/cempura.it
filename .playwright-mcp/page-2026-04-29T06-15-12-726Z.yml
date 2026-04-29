@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: x:0000 y:0000
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "cempura.it" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]:
+          - generic [ref=e9]: ac
+        - generic [ref=e10]: cempura.it
+      - navigation
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e18]: ▌
+        - generic [ref=e20]: lat 50.0647° nlon 19.9450° etz utc+2
+      - heading "Building the systems that make engineering teams faster." [level=1] [ref=e22]:
+        - generic [ref=e23]: Building the systems
+        - generic [ref=e24]: that make engineering
+        - generic [ref=e25]: teams faster.
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: AI-assisted delivery, internal tooling, and team scaling — for organizations that want results, not roadmaps.
+        - generic [ref=e28]:
+          - link "[ view case study → ]" [ref=e29] [cursor=pointer]:
+            - /url: /case/ai-adoption
+            - text: "[ view case study"
+            - generic [ref=e30]: →
+            - text: "]"
+          - link "[ see SYNEK ↗ ]" [ref=e31] [cursor=pointer]:
+            - /url: "#synek"
+            - text: "[ see SYNEK"
+            - generic [ref=e32]: ↗
+            - text: "]"
+      - generic [ref=e33]:
+        - text: ↓ scroll · 04 sections
+        - generic [ref=e34]: 2026-04-29 · session.live
+    - generic [ref=e36]:
+      - generic [ref=e38]:
+        - text: "01"
+        - generic [ref=e39]: — featured / live project
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: ● live · synek.app
+          - heading "SYNEK" [level=2] [ref=e43]
+          - paragraph [ref=e44]: A side project for coaches and athletes — replacing spreadsheets and manual Strava copy-paste with a single, opinionated workspace.
+          - generic [ref=e45]:
+            - generic [ref=e46]: Next.js
+            - generic [ref=e47]: Supabase
+            - generic [ref=e48]: Vercel
+            - generic [ref=e49]: Claude Code
+          - generic [ref=e50]:
+            - generic [ref=e51]: founded2024
+            - generic [ref=e52]: rolesolo · design + build
+            - generic [ref=e53]: stageprivate beta
+          - link "[ visit ↗ ]" [ref=e54] [cursor=pointer]:
+            - /url: https://synek.app
+            - text: "[ visit"
+            - generic [ref=e55]: ↗
+            - text: "]"
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: synek_preview.png · 1600×1000
+            - generic [ref=e59]: ⌘ + k · search
+          - generic [ref=e60]: fig.01 — workspace shellparallax · 8px
+    - generic [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - text: "02"
+          - generic [ref=e66]: — case studies
+        - text: 03 entries · 1 published
+      - generic [ref=e67]:
+        - link "01 ● published 0 to ~85% AI-assisted delivery adoption Took a 9-person engineering team from zero baseline to ~85% measured AI adoption in two quarters. 2025 · betting · eng lead [ read → ]" [ref=e69] [cursor=pointer]:
+          - /url: /case/ai-adoption
+          - generic [ref=e70]:
+            - generic [ref=e71]: "01"
+            - generic [ref=e72]: ● published
+          - heading "0 to ~85% AI-assisted delivery adoption" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Took a 9-person engineering team from zero baseline to ~85% measured AI adoption in two quarters.
+          - generic [ref=e75]: 2025 · betting · eng lead
+          - generic [ref=e76]: "[ read → ]"
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: "02"
+            - generic [ref=e81]: ○ coming soon
+          - heading "120+ stale flags deleted in days, not weeks" [level=3] [ref=e82]
+          - paragraph [ref=e83]: Built a feature-flag audit pipeline. Cleared a 4-year backlog of dead toggles in under a week.
+          - generic [ref=e84]: 2024 · platform · eng lead
+          - generic [ref=e85]: "[ coming soon ]"
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]: "03"
+            - generic [ref=e90]: ○ coming soon
+          - heading "Shared Codex workflows for a 9-person team" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Codified prompts, review patterns, and CLI scaffolds so every engineer started Monday from the same baseline.
+          - generic [ref=e93]: 2025 · tooling · eng lead
+          - generic [ref=e94]: "[ coming soon ]"
+    - generic [ref=e96]:
+      - generic [ref=e98]:
+        - text: "03"
+        - generic [ref=e99]: — positioning
+      - generic [ref=e101]:
+        - paragraph [ref=e102]:
+          - text: Ten-plus years across software, product, and operations in
+          - emphasis [ref=e103]: regulated, high-traffic betting
+          - text: . Hands-on with AI-assisted delivery, internal tooling, automation, and workflow design.
+        - paragraph [ref=e104]: ↳ building over advising · prototypes over decks
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]: contact
+          - list [ref=e110]:
+            - listitem [ref=e111]:
+              - link "artur@cempura.it" [ref=e112] [cursor=pointer]:
+                - /url: mailto:artur@cempura.it
+            - listitem [ref=e113]:
+              - link "linkedin.com/in/arturcempura" [ref=e114] [cursor=pointer]:
+                - /url: https://linkedin.com/in/arturcempura
+            - listitem [ref=e115]:
+              - link "github.com/AC3m" [ref=e116] [cursor=pointer]:
+                - /url: https://github.com/AC3m
+        - generic [ref=e117]:
+          - generic [ref=e118]: meta
+          - list [ref=e119]:
+            - listitem [ref=e120]: "last updated: 2026-04-28"
+            - listitem [ref=e121]: "version: v2.0"
+            - listitem [ref=e122]: "uptime: 100%"
+        - generic [ref=e123]:
+          - generic [ref=e124]: colophon
+          - paragraph [ref=e125]: set in fraunces, inter, jetbrains mono · built with next.js, tailwind, framer motion
+      - generic [ref=e126]:
+        - generic [ref=e127]: $ end_of_line ▌
+        - text: © 2026 — krakow / pl

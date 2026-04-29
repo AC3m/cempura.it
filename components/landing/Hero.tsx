@@ -37,7 +37,7 @@ export function Hero() {
             style={{ fontSize: 'clamp(44px, 8vw, 132px)', color: 'var(--ink)' }}
           >
             {['Building the systems', 'that make engineering', 'teams faster.'].map((line, i) => (
-              <span key={i} className="block">
+              <span key={i} style={{ display: 'block' }}>
                 {line}
               </span>
             ))}

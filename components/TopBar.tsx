@@ -12,7 +12,7 @@ export function TopBar({ showBack }: TopBarProps) {
       className="fixed top-0 left-0 right-0 z-40 crumb-blur"
       style={{ borderBottom: '1px solid var(--border)' }}
     >
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8 h-14 flex items-center justify-between">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8 h-14 flex items-center justify-between overflow-hidden">
         <LogoMark />
         <nav className="flex items-center gap-6">
           {showBack && (

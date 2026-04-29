@@ -20,7 +20,7 @@ export default function AppleIcon() {
         <svg width="120" height="120" viewBox="0 0 28 28">
           <path d="M5 6 L2 14 L5 22" stroke="#f7f5f2" strokeWidth="1.5" fill="none" strokeLinecap="square" />
           <path d="M23 6 L26 14 L23 22" stroke="#f7f5f2" strokeWidth="1.5" fill="none" strokeLinecap="square" />
-          <text x="14" y="18" textAnchor="middle" fontSize="11" fontWeight="500" fill="#f7f5f2">ac</text>
+          <line x1="11" y1="14" x2="17" y2="14" stroke="#c9a87c" strokeWidth="1" />
         </svg>
       </div>
     ),

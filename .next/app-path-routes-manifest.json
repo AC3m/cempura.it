@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/apple-icon/route": "/apple-icon",
+  "/opengraph-image/route": "/opengraph-image",
+  "/icon/route": "/icon",
+  "/page": "/",
+  "/case/ai-adoption/page": "/case/ai-adoption"
+}
