@@ -13,7 +13,7 @@ export function ThemeToggle() {
 
   return (
     <div
-      className="font-mono text-[12px] tracking-[0.04em] flex items-center gap-1 select-none"
+      className="font-mono text-[12px] tracking-[0.04em] flex items-center gap-1 select-none whitespace-nowrap"
       style={{ color: 'var(--muted)' }}
     >
       <button
