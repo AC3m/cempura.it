@@ -13,9 +13,9 @@ import { Lessons } from '@/components/case/Lessons'
 import { PrevNext } from '@/components/case/PrevNext'
 
 export const metadata = {
-  title: '0 to ~85% AI-assisted delivery adoption — Artur Cempura',
+  title: '92% reviewed, 78% AI-assisted — Artur Cempura',
   description:
-    'Two quarters. Nine engineers. One internal dashboard that turned a vibe into a baseline — and a baseline into a habit.',
+    'Two quarters. Nine engineers. One internal full-stack dashboard that turned a vibe into a baseline — and a baseline into a habit.',
 }
 
 export default function AiAdoptionPage() {
@@ -53,14 +53,15 @@ export default function AiAdoptionPage() {
                   className="font-display font-light leading-[0.95] tracking-[-0.035em]"
                   style={{ fontSize: 'clamp(44px, 7vw, 112px)', color: 'var(--ink)' }}
                 >
-                  0 to ~85%<br />AI-assisted<br />delivery adoption.
+                  92% reviewed.<br />78% AI-assisted.
                 </h1>
                 <p
                   className="mt-10 max-w-[60ch] text-[17px] md:text-[19px] leading-[1.55]"
                   style={{ color: 'var(--muted)' }}
                 >
-                  Two quarters. Nine engineers. One internal dashboard that turned a vibe into a
-                  baseline — and a baseline into a habit.
+                  Two quarters. Nine engineers. One internal full-stack dashboard that turned a
+                  vibe into a baseline — and a baseline into a habit. Now scaling toward the
+                  60-engineer Sportsbook channel.
                 </p>
               </div>
             </div>
@@ -147,10 +148,10 @@ export default function AiAdoptionPage() {
             <Reveal><SectionHead ord="03" label="outcome" className="mb-12 md:mb-16" /></Reveal>
             <OutcomeGrid>
               <Reveal className="col-span-12 md:col-span-4" delay={0}>
-                <Stat from={0} to={85} suffix="%" label="measured AI-assisted delivery" duration={1600} />
+                <Stat from={0} to={92} suffix="%" label="of work AI-reviewed" duration={1600} />
               </Reveal>
               <Reveal className="col-span-12 md:col-span-4" delay={120}>
-                <Stat to={9} label="engineers, fully aligned" duration={1000} />
+                <Stat from={0} to={78} suffix="%" label="of work AI-assisted" duration={1400} />
               </Reveal>
               <Reveal className="col-span-12 md:col-span-4" delay={240}>
                 <Stat to={0} suffix="%" label="attrition during rollout" duration={1000} />

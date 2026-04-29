@@ -55,12 +55,18 @@ export function SynekSection() {
               workspace.
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-10">
-              {['Next.js', 'Supabase', 'Vercel', 'Claude Code'].map((s) => (
+            <div className="flex flex-wrap gap-2 mb-3">
+              {['React Router 7', 'Supabase', 'TypeScript', 'Claude Code'].map((s) => (
                 <span key={s} className="chip">
                   {s}
                 </span>
               ))}
+            </div>
+            <div
+              className="font-mono text-[11px] mb-10"
+              style={{ color: 'var(--muted)' }}
+            >
+              ↳ Strava + Vital integrations · Next.js migration in progress
             </div>
 
             <div
