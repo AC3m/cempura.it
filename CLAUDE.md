@@ -5,56 +5,67 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Vite dev server → http://localhost:5173
-npm run build    # TypeScript check + production build → dist/
+npm run dev      # Next.js dev server → http://localhost:3000
+npm run build    # TypeScript check + production build → .next/
+npm run start    # Preview production build locally
 npm run lint     # ESLint with React + TypeScript rules
-npm run preview  # Preview production build locally
 ```
 
 No test suite.
 
 ## Architecture
 
-Single-page personal portfolio (digital business card). No routing, no state management.
+Personal portfolio. Next.js 15 App Router, static export compatible.
 
-**Stack:** React 19, TypeScript, Vite, Tailwind CSS 4, Framer Motion
+**Stack:** React 19, TypeScript, Next.js 15, Tailwind CSS 4, next-themes, @next/mdx, @vercel/analytics
 
-**Layout:** `App.tsx` renders sections vertically: Hero → Impact → Strengths → Tech → Footer
+**Routing:** App Router. `/` landing page, `/case/ai-adoption` case study (static).
 
-**Deployment:** Manual GitHub Actions workflow → S3 + CloudFront invalidation.
+**Content:** Case studies are inline React components in `app/case/[slug]/page.tsx` (not MDX files).
+
+**Deployment:** Vercel. Automatic deploys on push to `main`.
+
+**Legacy source:** Original Vite/React app archived to `.legacy/`.
 
 ## Design System
 
-Color tokens defined in `src/index.css` via Tailwind 4 `@theme`. Always use semantic tokens — never hardcoded hex values.
+Color tokens in `app/globals.css` as CSS custom properties. Always use tokens — never hardcoded hex.
 
 ```css
-bg-background, bg-surface-1/2/3, border
-text-text-primary, text-text-secondary, text-text-muted
-accent, accent-hover
+var(--bg)        /* page background */
+var(--surface)   /* card background */
+var(--ink)       /* primary text */
+var(--muted)     /* secondary text */
+var(--border)    /* borders */
+var(--accent)    /* gold accent #B8945C */
+var(--signal)    /* signal red #FF3B2F */
 ```
 
-Spacing: 8px grid (Tailwind defaults). Mobile-first — `sm:` prefix for desktop breakpoints.
+Dark mode: `html.dark` class set by next-themes (`attribute="class"`).
+
+Tailwind v4 config: `@import 'tailwindcss'` + `@source` directives in `app/globals.css`. PostCSS plugin: `@tailwindcss/postcss` in `postcss.config.mjs`.
+
+Fonts via `next/font/google`: Fraunces (`--font-display`), Inter (`--font-body`), JetBrains Mono (`--font-mono`).
 
 ## Animation Pattern
 
-Every component uses this pattern (accessibility-aware):
+Use the `Reveal` component (`components/Reveal.tsx`) for scroll-triggered fade+lift:
 
 ```tsx
-const prefersReducedMotion = useReducedMotion();
-
-const variants = {
-  hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: prefersReducedMotion ? 0 : 0.5 } },
-};
-
-// Scroll-triggered:
-<motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-50px' }}>
+<Reveal delay={120}>
+  <p>Content revealed on scroll</p>
+</Reveal>
 ```
 
-Define motion variants **inside components** (not imported from `lib/motion.ts`) to keep `useReducedMotion` co-located.
+`Reveal` uses `IntersectionObserver` + CSS `.reveal` / `.reveal.in` classes. Respects `prefers-reduced-motion`.
+
+For countup numbers: `CountUp` component (`components/CountUp.tsx`).
 
 ## Conventions
 
-- Named exports everywhere except `App.tsx` (default export)
-- Lucide React icons imported per-component
+- Named exports everywhere (no default exports except `app/layout.tsx`)
+- No Framer Motion — animations via CSS transitions + IntersectionObserver
 - All interactive elements: 48px min-height for touch targets
+- Mobile-first: `md:` prefix for desktop breakpoints
+- `font-display` class = Fraunces serif (headlines)
+- `font-mono` class = JetBrains Mono (terminal, labels, meta)
