@@ -13,7 +13,7 @@ export function Hero() {
 
         {/* Terminal layer */}
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-5">
+          <div className="col-span-12 md:col-span-5 min-h-[80px]">
             <TerminalBoot onSettle={() => setSettled(true)} />
           </div>
           <div className="hidden md:block col-span-7">
