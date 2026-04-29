@@ -11,6 +11,12 @@ node_modules
 dist
 dist-ssr
 *.local
+.next
+.legacy
+tsconfig.tsbuildinfo
+*.png
+*.yml
+.playwright-mcp/
 creds
 
 # Editor directories and files
@@ -23,3 +29,4 @@ creds
 *.njsproj
 *.sln
 *.sw?
+*.zip
