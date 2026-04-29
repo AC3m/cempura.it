@@ -24,7 +24,14 @@ export function PositioningStrip() {
               . Hands-on with AI-assisted delivery, internal tooling, automation, and workflow
               design.
             </p>
-            <p className="mt-10 font-mono text-[13px]" style={{ color: 'var(--muted)' }}>
+            <p
+              className="mt-8 font-mono text-[13px] leading-[1.6]"
+              style={{ color: 'var(--muted)' }}
+            >
+              ↳ leading a 9-engineer team within a 60-engineer / 6-team Sportsbook channel · part
+              of a 400+ tech group
+            </p>
+            <p className="mt-4 font-mono text-[13px]" style={{ color: 'var(--muted)' }}>
               ↳ building over advising · prototypes over decks
             </p>
           </Reveal>

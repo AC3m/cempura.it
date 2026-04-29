@@ -5,10 +5,10 @@ import { SectionHead } from '../SectionHead'
 const CARDS = [
   {
     num: '01',
-    title: '0 to ~85% AI-assisted\ndelivery adoption',
+    title: '92% reviewed,\n78% AI-assisted',
     meta: '2025 · betting · eng lead',
     summary:
-      'Took a 9-person engineering team from zero baseline to ~85% measured AI adoption in two quarters.',
+      'Stood up an internal full-stack DORA + AI-usage dashboard for a 9-engineer team. Scaling toward the 60-engineer Sportsbook channel.',
     active: true,
     href: '/case/ai-adoption',
   },
@@ -17,7 +17,7 @@ const CARDS = [
     title: '120+ stale flags deleted\nin days, not weeks',
     meta: '2024 · platform · eng lead',
     summary:
-      'Built a feature-flag audit pipeline. Cleared a 4-year backlog of dead toggles in under a week.',
+      'Hard sunset deadline. ~300k daily users behind a feature-flag platform 400+ devs leaned on. Agents read the code, proposed deletions, opened the PRs. The replacement runs in-house: a TS/React SDK now powering 60 Sportsbook engineers.',
     active: false,
     href: '#',
   },
@@ -26,7 +26,7 @@ const CARDS = [
     title: 'Shared Codex workflows\nfor a 9-person team',
     meta: '2025 · tooling · eng lead',
     summary:
-      "Codified prompts, review patterns, and CLI scaffolds so every engineer started Monday from the same baseline.",
+      'Nine engineers, nine flavours of AI output. Standardised on CLI-first tooling — Codex, Copilot — and codified the things that kept drifting: specs, implementation, review, docs. Quality stops depending on whoever wrote today\u2019s prompt.',
     active: false,
     href: '#',
   },
