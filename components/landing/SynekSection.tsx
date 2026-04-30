@@ -75,7 +75,7 @@ export function SynekSection() {
             >
               <div className="flex justify-between">
                 <span>founded</span>
-                <span style={{ color: 'var(--ink)' }}>2024</span>
+                <span style={{ color: 'var(--ink)' }}>2026</span>
               </div>
               <div className="flex justify-between">
                 <span>role</span>
@@ -83,7 +83,7 @@ export function SynekSection() {
               </div>
               <div className="flex justify-between">
                 <span>stage</span>
-                <span style={{ color: 'var(--ink)' }}>private beta</span>
+                <span style={{ color: 'var(--ink)' }}>public beta</span>
               </div>
             </div>
 

@@ -23,8 +23,8 @@ export function Footer() {
           <div className="col-span-6 md:col-span-4">
             <div className="ord mb-4">meta</div>
             <ul className="space-y-2 font-mono text-[12px]" style={{ color: 'var(--muted)' }}>
-              <li>last updated: 2026-04-28</li>
-              <li>version: v2.0</li>
+              <li>last updated: 2026-04-29</li>
+              <li>version: v1.2.0</li>
               <li>uptime: 100%</li>
             </ul>
           </div>
@@ -32,7 +32,7 @@ export function Footer() {
           <div className="col-span-6 md:col-span-4">
             <div className="ord mb-4">colophon</div>
             <p className="font-mono text-[12px] leading-[1.7]" style={{ color: 'var(--muted)' }}>
-              set in fraunces, inter, jetbrains mono · built with next.js, tailwind, framer motion
+              set in fraunces, inter, jetbrains mono · built with next.js, tailwind, css transitions
             </p>
           </div>
         </div>
