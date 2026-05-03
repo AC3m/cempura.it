@@ -17,7 +17,7 @@ const CARDS = [
     title: '120+ stale flags deleted\nin days, not weeks',
     meta: '2026 · platform · eng lead',
     summary:
-      'A 7-year backlog of dead toggles. ~350k daily users behind the legacy platform 400+ devs leaned on. Three weeks to sunset. Agents read the code, proposed deletions, opened the PRs — 120+ stale flags gone in 10 days. The replacement runs in-house: a TS/React SDK now powering 60 Sportsbook engineers.',
+      'Hard sunset deadline. ~350k daily users behind the legacy platform 400+ devs leaned on. Three weeks to sunset. Agents read the code, proposed deletions, opened the PRs — 120+ stale flags gone in 10 days. The replacement runs in-house: a TS/React SDK now powering 60 Sportsbook engineers.',
     active: false,
     href: '#',
   },

@@ -114,7 +114,7 @@ export default function AiAdoptionPage() {
                   {
                     n: '01',
                     t: 'Internal dashboard, two weeks.',
-                    d: 'Stitched GitLab, Jira, and IDE telemetry into a single team view. Owned the schema; owned the read path.',
+                    d: 'Stitched GitLab events, Jira metadata, and self-reported PR labels (ai-reviewed, ai-assisted) into a single team view. Owned the schema; owned the read path.',
                   },
                   {
                     n: '02',
