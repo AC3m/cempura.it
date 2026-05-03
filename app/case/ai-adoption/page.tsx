@@ -24,7 +24,7 @@ export default function AiAdoptionPage() {
       <ScrollProgress />
       <Crosshair />
       <TopBar showBack />
-      <Crumb slug="ai-adoption" meta="case 01 · 2025 · evoke plc" />
+      <Crumb slug="ai-adoption" meta="case 01 · 2026 · evoke plc" />
       <main>
         {/* Hero */}
         <section className="pt-16 md:pt-24 pb-[96px] md:pb-[160px]">
@@ -43,7 +43,7 @@ export default function AiAdoptionPage() {
                   className="font-mono text-[12px] mb-6 flex flex-wrap gap-x-4 gap-y-1"
                   style={{ color: 'var(--muted)' }}
                 >
-                  <span>2025</span><span>·</span>
+                  <span>2026</span><span>·</span>
                   <span>evoke plc</span><span>·</span>
                   <span>engineering lead</span><span>·</span>
                   <span>9-person team</span><span>·</span>

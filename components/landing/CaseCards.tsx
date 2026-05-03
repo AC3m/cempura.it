@@ -6,7 +6,7 @@ const CARDS = [
   {
     num: '01',
     title: '92% reviewed,\n78% AI-assisted',
-    meta: '2025 · betting · eng lead',
+    meta: '2026 · betting · eng lead',
     summary:
       'Stood up an internal full-stack DORA + AI-usage dashboard for a 9-engineer team. Scaling toward the 60-engineer Sportsbook channel.',
     active: true,
@@ -15,16 +15,16 @@ const CARDS = [
   {
     num: '02',
     title: '120+ stale flags deleted\nin days, not weeks',
-    meta: '2024 · platform · eng lead',
+    meta: '2026 · platform · eng lead',
     summary:
-      'Hard sunset deadline. ~300k daily users behind a feature-flag platform 400+ devs leaned on. Agents read the code, proposed deletions, opened the PRs. The replacement runs in-house: a TS/React SDK now powering 60 Sportsbook engineers.',
+      'A 7-year backlog of dead toggles. ~350k daily users behind the legacy platform 400+ devs leaned on. Three weeks to sunset. Agents read the code, proposed deletions, opened the PRs — 120+ stale flags gone in 10 days. The replacement runs in-house: a TS/React SDK now powering 60 Sportsbook engineers.',
     active: false,
     href: '#',
   },
   {
     num: '03',
     title: 'Shared Codex workflows\nfor a 9-person team',
-    meta: '2025 · tooling · eng lead',
+    meta: '2026 · tooling · eng lead',
     summary:
       'Nine engineers, nine flavours of AI output. Standardised on CLI-first tooling — Codex, Copilot — and codified the things that kept drifting: specs, implementation, review, docs. Quality stops depending on whoever wrote today\u2019s prompt.',
     active: false,
