@@ -66,7 +66,7 @@ export function SynekSection() {
               className="font-mono text-[11px] mb-10"
               style={{ color: 'var(--muted)' }}
             >
-              ↳ Strava + Vital integrations · Next.js migration in progress
+              ↳ Strava integration
             </div>
 
             <div
