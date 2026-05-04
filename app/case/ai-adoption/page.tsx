@@ -24,7 +24,7 @@ export default function AiAdoptionPage() {
       <ScrollProgress />
       <Crosshair />
       <TopBar showBack />
-      <Crumb slug="ai-adoption" meta="case 01 · 2025 · evoke plc" />
+      <Crumb slug="ai-adoption" meta="case 01 · 2026 · evoke plc" />
       <main>
         {/* Hero */}
         <section className="pt-16 md:pt-24 pb-[96px] md:pb-[160px]">
@@ -43,7 +43,7 @@ export default function AiAdoptionPage() {
                   className="font-mono text-[12px] mb-6 flex flex-wrap gap-x-4 gap-y-1"
                   style={{ color: 'var(--muted)' }}
                 >
-                  <span>2025</span><span>·</span>
+                  <span>2026</span><span>·</span>
                   <span>evoke plc</span><span>·</span>
                   <span>engineering lead</span><span>·</span>
                   <span>9-person team</span><span>·</span>
@@ -114,7 +114,7 @@ export default function AiAdoptionPage() {
                   {
                     n: '01',
                     t: 'Internal dashboard, two weeks.',
-                    d: 'Stitched GitLab, Jira, and IDE telemetry into a single team view. Owned the schema; owned the read path.',
+                    d: 'Stitched GitLab events, Jira metadata, and self-reported PR labels (ai-reviewed, ai-assisted) into a single team view. Owned the schema; owned the read path.',
                   },
                   {
                     n: '02',
@@ -185,10 +185,6 @@ export default function AiAdoptionPage() {
                     {
                       bold: 'Define "AI-assisted" earlier.',
                       text: "The first month was spent re-litigating what counted. A loose, public definition would've moved faster than a perfect one.",
-                    },
-                    {
-                      bold: 'Bring product in from week one.',
-                      text: 'Engineering moved first. By the time PM noticed the velocity shift, scope had already absorbed the gain.',
                     },
                   ]}
                 />
