@@ -186,10 +186,6 @@ export default function AiAdoptionPage() {
                       bold: 'Define "AI-assisted" earlier.',
                       text: "The first month was spent re-litigating what counted. A loose, public definition would've moved faster than a perfect one.",
                     },
-                    {
-                      bold: 'Bring product in from week one.',
-                      text: 'Engineering moved first. By the time PM noticed the velocity shift, scope had already absorbed the gain.',
-                    },
                   ]}
                 />
               </Reveal>
