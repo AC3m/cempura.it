@@ -97,12 +97,7 @@ export function SynekSection() {
               ref={visualRef}
               className="ph-rect aspect-[16/10] w-full relative will-change-transform"
             >
-              <div
-                className="absolute top-3 left-3 font-mono text-[10px]"
-                style={{ color: 'var(--muted)' }}
-              >
-                synek_preview.png · 1600×1000
-              </div>
+              {/* TODO: replace placeholder with synek_preview.png (1600×1000) */}
               <div
                 className="absolute bottom-3 right-3 font-mono text-[10px]"
                 style={{ color: 'var(--accent)' }}
