@@ -1,11 +1,14 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useTheme } from 'next-themes'
 import { Reveal } from '../Reveal'
 import { SectionHead } from '../SectionHead'
 
 export function SynekSection() {
   const visualRef = useRef<HTMLDivElement>(null)
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === 'dark'
 
   useEffect(() => {
     const el = visualRef.current
@@ -40,11 +43,12 @@ export function SynekSection() {
             <div className="font-mono text-[11px] mb-6" style={{ color: 'var(--accent)' }}>
               ● live · synek.app
             </div>
-            <h2
-              className="font-display font-light leading-[0.95] mb-6"
-              style={{ fontSize: 'clamp(56px, 6vw, 88px)', color: 'var(--ink)' }}
-            >
-              SYNEK
+            <h2 className="synek-lockup mb-6">
+              <span className="synek-mark" aria-hidden="true">
+                <span className="sq sq-a" />
+                <span className="sq sq-b" />
+              </span>
+              <span className="synek-word">SYNEK</span>
             </h2>
             <p
               className="text-[17px] leading-[1.55] mb-8 max-w-[44ch]"
@@ -93,31 +97,26 @@ export function SynekSection() {
           </Reveal>
 
           <Reveal className="col-span-12 md:col-span-7" delay={120}>
-            <div
-              ref={visualRef}
-              className="ph-rect aspect-[16/10] w-full relative will-change-transform"
-            >
-              {/* TODO: replace placeholder with synek_preview.png (1600×1000) */}
-              <div
-                className="absolute bottom-3 right-3 font-mono text-[10px]"
-                style={{ color: 'var(--accent)' }}
-              >
-                ⌘ + k · search
-              </div>
-              <div className="absolute inset-x-10 top-16 bottom-12 grid grid-cols-12 gap-3 opacity-40">
-                <div className="col-span-3 border" style={{ borderColor: 'var(--border)' }} />
-                <div className="col-span-9 grid grid-rows-6 gap-3">
-                  <div className="row-span-2 border" style={{ borderColor: 'var(--border)' }} />
-                  <div className="row-span-4 border" style={{ borderColor: 'var(--border)' }} />
-                </div>
-              </div>
-            </div>
-            <div
-              className="mt-3 flex justify-between font-mono text-[11px]"
-              style={{ color: 'var(--muted)' }}
-            >
-              <span>fig.01 — workspace shell</span>
-              <span>parallax · 8px</span>
+            <div ref={visualRef} className="will-change-transform">
+              <figure className="m-0">
+                <img
+                  src={isDark ? '/synek-ipad-dark.png' : '/synek-ipad-light.png'}
+                  alt="SYNEK — coach view on iPad Pro"
+                  className="block w-full h-auto"
+                  style={{
+                    filter: isDark
+                      ? 'drop-shadow(0 28px 50px rgba(0,0,0,0.5)) drop-shadow(0 6px 12px rgba(0,0,0,0.3))'
+                      : 'drop-shadow(0 28px 50px rgba(20,20,40,0.18)) drop-shadow(0 6px 12px rgba(20,20,40,0.08))',
+                  }}
+                />
+                <figcaption
+                  className="mt-6 flex justify-between font-mono text-[11px]"
+                  style={{ color: 'var(--muted)' }}
+                >
+                  <span>fig.01 — synek.app on iPad Pro 13&quot; · coach view · week 7/14</span>
+                  <span>{isDark ? 'space black' : 'silver'}</span>
+                </figcaption>
+              </figure>
             </div>
           </Reveal>
         </div>

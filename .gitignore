@@ -15,6 +15,7 @@ dist-ssr
 .legacy
 tsconfig.tsbuildinfo
 *.png
+!public/*.png
 *.yml
 .playwright-mcp/
 creds
