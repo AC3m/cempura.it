@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google'
+import { Fraunces, Inter, Inter_Tight, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Providers } from '@/components/Providers'
@@ -16,6 +16,13 @@ const fraunces = Fraunces({
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
+})
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-synek',
   display: 'swap',
 })
 
@@ -57,7 +64,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${fraunces.variable} ${inter.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <body>
         <Providers>
